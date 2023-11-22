@@ -4,7 +4,9 @@
 .App {
   text-align: center;
 }
-
+.monserrat{
+  font-family: Montserrat;
+}
 .App-logo {
   height: 40vmin;
   pointer-events: none;

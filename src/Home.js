@@ -1,38 +1,28 @@
-import React,{Suspense} from 'react'
-import { Canvas } from '@react-three/fiber'
-import Loader from './Loader'
-import Island from './Island'
-import { OrbitControls } from '@react-three/drei'
+
+import { slideInFromLeft } from './Motion'
+import Navbar from './Navbar'
+import { motion } from 'framer-motion'
 const Home = () => {
-  const adjustScreenCan=()=>{
-    
-    let rotation=[0.1,4.7,0]
-   
-    return [rotation]
-  }
-  const [isrotation]=adjustScreenCan();
+
   return (
-    <section className='w-full h-screen realtive'>
-     
-        <Canvas className='w-full h-screen bg-transparent' camera={{near:0.1,far:1000}}>
-            <Suspense fallback={<Loader></Loader>}>
-                <directionalLight/>
-                <ambientLight/>
-                <pointLight/>
-                <spotLight/>
-                <hemisphereLight/>
-                <OrbitControls
-                enableZoom={false}
-                maxPolarAngle={Math.PI/1}
-                minPolarAngle={Math.PI/2}
-                >
-                </OrbitControls>
-                <Island
-                rotation={isrotation}
-                ></Island>
-            </Suspense>
-        </Canvas>
-    </section>
+    <div className='h-full overflow-y-auto bg-[#050816]'>
+      <div className="h-screen bg-center bg-no-repeat bg-cover bg-[url('./herobg.png')] " >
+        <Navbar></Navbar>
+        <motion.div initial='hidden'  animate='visible' exit='exit' className='absolute top-32 ' id="about">
+          <motion.div variants={slideInFromLeft(0.5)}>
+            <h1 className='ml-32 text-6xl font-extrabold'>Hi, I&apos;m Rudra
+              <br className='lg:hidden'></br>
+              <span className='text-[#bf61ff]'> Manikanta</span></h1>
+            <p className='ml-32 text-xl font-bold leading-8 montserrat'>I enjoy crafting
+              <br className='lg:hidden'></br>
+              Websites and bugs</p>
+          </motion.div>
+        </motion.div>
+      </div>
+      <div>
+        
+      </div>
+    </div>
   )
 }
 

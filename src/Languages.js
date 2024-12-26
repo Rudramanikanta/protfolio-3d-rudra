@@ -1,4 +1,4 @@
-import { Decal, Float, OrbitControls, useTexture } from '@react-three/drei'
+import { Decal, Float, OrbitControls, Text, useTexture } from '@react-three/drei'
 import React from 'react'
 const Languages = (props) => {
    const [decal]=useTexture([props.image])
@@ -21,6 +21,7 @@ const Languages = (props) => {
           flatShading
         ></Decal>
     </mesh>
+   
     </Float>
   )
 }

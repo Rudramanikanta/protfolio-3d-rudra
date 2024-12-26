@@ -1,7 +1,6 @@
 import './App.css';
 import { Suspense } from 'react'
 import Loader from './Loader'
-import Computer from './Computer'
 import { motion } from 'framer-motion'
 import { OrbitControls, Preload } from '@react-three/drei'
 import { Canvas } from '@react-three/fiber'
@@ -38,15 +37,8 @@ function App() {
   return (
     <div className='relative z-0 bg-[#050816]'>
       <Home></Home>
-      <motion.div variants={slideInFromLeft(0.5)} className='-mt-[300px] h-screen w-full'>
-        <Canvas className='w-full h-screen overflow-visible overflow-y-auto'>
-          <Suspense fallback={<Loader></Loader>}>
-            <OrbitControls enableZoom={false} maxPolarAngle={Math.PI / 1} minPolarAngle={Math.PI / 2} ></OrbitControls>
-            <Computer></Computer>
-          </Suspense>
-        </Canvas>
-      </motion.div>
-      <div className='flex-1 gap-5 gap-y-6'>
+      
+      <div className='relative flex-1 gap-5 gap-y-6'>
         <div className='p-10'>
         <h1 className='p-2 text-6xl font-bold orange-text-gradient'>Overview</h1>
         <p className='p-3 leading-[30px] text-xl w-full font-semibold montserrat'>As a <span className='blue-text-gradient'>full-stack developer</span>, I have the exciting role of crafting entire web experiences from the ground up, using my skills to design and develop both the frontend and backend of websites, ensuring they function seamlessly and look visually appealing.</p>
@@ -73,12 +65,12 @@ function App() {
             <p className='leading-[40px] montserrat hover:organe_gradient font-semibold text-xl width-[200px]'>I mainly focused on building my project on ReactJS and its libraries to leverage the power of this popular JavaScript framework. ReactJS provides a robust and efficient way to create dynamic user interfaces, making it an ideal choice for web development projects.</p>
         </div>
         <div className='grid gap-4 gap-y-5 gap-x-4 lg:grid-cols-3 align-center'>
-                <Tilt className='w-full  shadow-card border-2 bg-tertiary duration-150 align-middle gap-x-4 ease-in p-[50px] h-[300px] px-8 bg-opacity-50 group  hover:rounded-md hover:scale-110   py-10  hover:bg-neutral-500/5 ring-1 ring-blue_gradient hover:ring-2 animate hover:ring-green_gradient rounded-[20px]'>
-                    <div className='flex text-center align-top gap-x-4'>
-                    <a href='https://github.com/rudramanikanta'><img src={github} className='rounded-full h-[50px] w-[50px]'></img></a>
-                    <p className='text-4xl font-bold text-white montserrat blue-text-gradient'>Farmer Seva</p>
+                <Tilt className='w-full  shadow-card border-2 z-[10] bg-tertiary duration-150 align-middle gap-x-4 ease-in p-[50px] h-[300px] px-8 bg-opacity-50 group  hover:rounded-md hover:scale-110   py-10  hover:bg-neutral-500/5 ring-1 ring-blue_gradient hover:ring-2 animate hover:ring-green_gradient rounded-[20px]'>
+                    <div className='flex text-center align-top gap-x-4 z-[40]'>
+                    <a href='https://github.com/rudramanikanta'><img src={github} className='rounded-full z-[40] h-[50px] w-[50px]'></img></a>
+                    <p className='text-4xl font-bold text-white montserrat blue-text-gradient z-[100]'>Farmer Seva</p>
                     </div>
-                    <p className='font-thin leading-7 text-white montserrat'>Overall, the MERN full stack architecture is a powerful and flexible choice for building Framer websites. This architecture allows for the development of dynamic and interactive websites with a rich user experience.</p>
+                    <p className='font-thin leading-7 text-white montserrat z-[4]'>Overall, the MERN full stack architecture is a powerful and flexible choice for building Framer websites. This architecture allows for the development of dynamic and interactive websites with a rich user experience.</p>
                 </Tilt>
                 <Tilt className=' duration-150 align-middle gap-x-4 ease-in border-2 ring-slate-500 shadow-xl p-[50px] h-[300px] px-8 bg-opacity-50 group  bg-tertiary hover:rounded-md hover:scale-110   py-10  hover:bg-neutral-500/5 ring-1 ring-blue_gradient hover:ring-2 animate hover:ring-green_gradient rounded-[20px]'>
                     <div className='flex text-center align-top gap-x-4'>

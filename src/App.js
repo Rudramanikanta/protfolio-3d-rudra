@@ -35,7 +35,7 @@ function App() {
     }
   };
   return (
-    <div className='relative z-0 bg-[#050816]'>
+    <div className='relative z-0 bg-gray-800/10'>
       <Home></Home>
       
       <div className='relative flex-1 gap-5 gap-y-6'>

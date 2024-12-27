@@ -10,12 +10,7 @@ const Home = () => {
     target:ref,
     offset:["start end","end start"]
   })
-  const size=useTransform(mar?.scrollYProgress,[0,1],["1rem","6rem"])
-  useEffect(()=>{
-    mar.scrollYProgress.onChange((val)=>{
-      console.log(val);
-    })
-  })
+  const size=useTransform(mar?.scrollYProgress,[0,1],["1rem","4rem"])
   return (
     <div className='h-full overflow-y-auto'>
       <div className="h-full bg-center bg-no-repeat bg-cover" >

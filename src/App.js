@@ -21,23 +21,19 @@ function App() {
     target:ref,
     offset:["start end","end end"]
   })
-  const padding = useTransform(
-    mar?.scrollYProgress,
-    [0, 1],
-    ["120px", "-310px"]
-  );
+  const padding=useTransform(mar?.scrollYProgress,[0,1],["130px","-50px"])
   useEffect(()=>{
    mar.scrollYProgress.onChange(val=>{
     console.log(val)
    }) 
   },[mar])
   return (
-    <div className="relative z-0 bg-gray-800/10">
+    <div className="relative z-0 text-black bg-white">
       <Home></Home>
-
-      <motion.div ref={ref} style={{marginTop:padding}}  className="relative flex-1 gap-5 p-10 ml-6 gap-y-6">
-        <div className="p-10 mt-10">
-          <h1 className="p-2 text-6xl font-bold orange-text-gradient">
+      
+      <motion.div   className="relative flex-1 gap-5 p-10 ml-6 gap-y-6">
+        <div className="p-10">
+          <h1 className="p-2 text-4xl font-bold orange-text-gradient">
             Overview
           </h1>
           <p className="p-3 leading-[30px] text-xl w-full font-semibold montserrat">

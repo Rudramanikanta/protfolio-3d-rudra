@@ -8,8 +8,12 @@ import mongodb from './assets/mongodb.png';
 import threejs from './assets/threejs.svg';
 import figma from './assets/figma.png';
 import git from './assets/git.png'
-
+import java from "./assets/java.png"
 const technologies = [
+    {
+      name:"java",
+      icon:java
+    },
     {
       name: "HTML 5",
       icon: html,

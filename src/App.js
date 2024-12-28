@@ -14,23 +14,18 @@ import Languages from "./Languages";
 import { technologies } from "./Sample";
 import { Tilt } from "react-tilt";
 import github from "./assets/github.png";
+import Word from "./Word";
 function App() {
   
-  const ref=useRef(null);
-  const mar=useScroll({
-    target:ref,
-    offset:["start end","end end"]
-  })
-  const padding=useTransform(mar?.scrollYProgress,[0,1],["130px","-50px"])
-  useEffect(()=>{
-   mar.scrollYProgress.onChange(val=>{
-    console.log(val)
-   }) 
-  },[mar])
+ 
   return (
     <div className="relative z-0 text-black bg-white">
       <Home></Home>
       
+      <Word></Word>
+      {/* <motion.div ref={ref}>
+        <button className="px-4 py-2 shadow-lg bg-gray-400/10 roudned-md ring-1 ring-gray-400" ><a href="https://leetcode.com/rudramanikanta02">Leetcode</a></button>
+      </motion.div> */}
       <motion.div   className="relative flex-1 gap-5 p-10 ml-6 gap-y-6">
         <div className="p-10">
           <h1 className="p-2 text-4xl font-bold orange-text-gradient">
@@ -78,7 +73,7 @@ function App() {
                 <img
                   src={github}
                   className="rounded-full z-[40] h-[50px] w-[50px]"
-                ></img>
+               alt="" ></img>
               </a>
               <p className="text-4xl font-bold text-white montserrat blue-text-gradient z-[100]">
                 Farmer Seva
@@ -97,7 +92,7 @@ function App() {
                 <img
                   src={github}
                   className="rounded-full h-[50px] w-[50px]"
-                ></img>
+                alt=""></img>
               </a>
               <p className="text-4xl font-bold blue-text-gradient montserrat ">
                 Movie site
@@ -116,7 +111,7 @@ function App() {
                 <img
                   src={github}
                   className="rounded-full h-[50px] w-[50px]"
-                ></img>
+               alt="" ></img>
               </a>
               <p className="text-4xl font-bold blue-text-gradient montserrat ">
                 Book store

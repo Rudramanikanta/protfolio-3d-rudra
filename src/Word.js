@@ -24,7 +24,7 @@ const Word = () => {
           <p className="p-3 leading-[30px] text-xl w-full font-semibold absolute montserrat tracking-wide pr-12 ">
           {
             words.map((word, index) => {
-                const totalWords = words.length; // Use the length of the split array
+                const totalWords = words.length; 
                 const start = index / totalWords;
                 const end = start + 1 / totalWords;
             

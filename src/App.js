@@ -16,19 +16,25 @@ import { Tilt } from "react-tilt";
 import github from "./assets/github.png";
 import Word from "./Word";
 function App() {
-  
- 
+  const ref=useRef(null)
+  const {scrollYProgress} = useScroll({
+    target:ref,
+    offset:["start end","end start"]
+  });
+  const marginTop=useTransform(scrollYProgress,[0,1],["100px","-150px"])
+ useEffect(()=>{
+  scrollYProgress.onChange((val)=>{
+    console.log(val)
+  })
+ })
   return (
     <div className="relative z-0 text-black bg-white">
       <Home></Home>
       
       <Word></Word>
-      {/* <motion.div ref={ref}>
-        <button className="px-4 py-2 shadow-lg bg-gray-400/10 roudned-md ring-1 ring-gray-400" ><a href="https://leetcode.com/rudramanikanta02">Leetcode</a></button>
-      </motion.div> */}
       <motion.div   className="relative flex-1 gap-5 p-10 ml-6 gap-y-6">
         <div className="p-10">
-          <h1 className="p-2 text-4xl font-bold orange-text-gradient">
+          <h1 className="p-2 mt-[20rem] text-4xl font-bold orange-text-gradient lg:mt-12">
             Overview
           </h1>
           <p className="p-3 leading-[30px] text-xl w-full font-semibold montserrat">
@@ -36,7 +42,7 @@ function App() {
             <span className="blue-text-gradient">full-stack developer</span>, I
             have the exciting role of crafting entire web experiences from the
             ground up, using my skills to design and develop both the frontend
-            and backend of websites, ensuring they function seamlessly and look
+            and backend of websites and applications , ensuring they function seamlessly and look
             visually appealing.
           </p>
         </div>
@@ -54,19 +60,19 @@ function App() {
           })}
         </div>
       </motion.div>
-      <div className="p-10 mt-10" id="project">
+      <div className="p-10 mt-10 ml-12" id="project">
         <div>
-          <h3 className="text-6xl font-black duration-300 green-text-gradient lg:leading-2 animate group-hover:scale-110 hover:blue_gradient">
+          <h3 className="text-4xl font-black duration-300 green-text-gradient lg:leading-2 animate group-hover:scale-110 hover:blue_gradient">
             Projects.
           </h3>
           <p className="leading-[40px] montserrat hover:organe_gradient font-semibold text-xl width-[200px]">
             I mainly focused on building my project on ReactJS and its libraries
-            to leverage the power of this popular JavaScript framework. ReactJS
+            to leverage the power of this popular JavaScript framework and its rich libraries. ReactJS
             provides a robust and efficient way to create dynamic user
             interfaces, making it an ideal choice for web development projects.
           </p>
         </div>
-        <div className="grid gap-4 gap-y-5 gap-x-4 lg:grid-cols-3 align-center">
+        <motion.div style={{marginTop}} ref={ref} className="grid gap-4 mt-10 gap-y-5 gap-x-4 lg:grid-cols-3 align-center">
           <Tilt className="w-full  shadow-card border-2 z-[10] bg-tertiary duration-150 align-middle gap-x-4 ease-in p-[50px] h-[300px] px-8 bg-opacity-50 group  hover:rounded-md hover:scale-110   py-10  hover:bg-neutral-500/5 ring-1 ring-blue_gradient hover:ring-2 animate hover:ring-green_gradient rounded-[20px]">
             <div className="flex text-center align-top gap-x-4 z-[40]">
               <a href="https://github.com/rudramanikanta">
@@ -124,7 +130,7 @@ function App() {
               back-end, which handles the data processing and storage.
             </p>
           </Tilt>
-        </div>
+        </motion.div>
       </div>
       <footer className="max-container " id="contact">
         <div className="flex flex-wrap items-start justify-between gap-20 max-lg:flex-col">

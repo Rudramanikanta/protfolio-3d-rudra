@@ -21,7 +21,7 @@ const Word = () => {
           <h1 className="p-2 text-4xl font-bold blue-text-gradient">
             About me
           </h1>
-          <p className="p-3 leading-[30px] text-xl w-full font-semibold absolute montserrat tracking-wide pr-12 ">
+          <p className="p-3 w-[90%] leading-[40px] text-xl  font-semibold absolute montserrat tracking-wide pr-12 ">
           {
             words.map((word, index) => {
                 const totalWords = words.length; 
@@ -40,7 +40,7 @@ const Word = () => {
             })
           }
           </p>
-          <p className="p-3 opacity-50 leading-[30px] text-xl w-full font-semibold absolute montserrat tracking-wide pr-12 ">
+          <p className="p-3 w-[90%] opacity-50 leading-[40px] text-xl  font-semibold absolute montserrat tracking-wide pr-12 ">
           {val}
           </p>
         </div>

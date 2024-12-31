@@ -21,12 +21,7 @@ function App() {
     target:ref,
     offset:["start end","end start"]
   });
-  const marginTop=useTransform(scrollYProgress,[0,1],["100px","-150px"])
- useEffect(()=>{
-  scrollYProgress.onChange((val)=>{
-    console.log(val)
-  })
- })
+  const marginTop=useTransform(scrollYProgress,[0,1],["100px","-130px"])
   return (
     <div className="relative z-0 text-black bg-white">
       <Home></Home>
@@ -34,9 +29,15 @@ function App() {
       <Word></Word>
       <motion.div   className="relative flex-1 gap-5 p-10 ml-6 gap-y-6">
         <div className="p-10">
-          <h1 className="p-2 mt-[20rem] text-4xl font-bold orange-text-gradient lg:mt-12">
+        <div className="flex justify-between mt-[6rem]">
+        <h1 className="p-2 text-4xl font-bold orange-text-gradient lg:mt-12">
             Overview
           </h1>
+          <button className="p-2 mt-12 transition-all duration-75 rounded-sm h-fit w-fit animate hover:rounded-md bg-neutral-500/5 hover:backdrop-blur-xl hover:bg-neutral-500/10 hover:scale-110"> 
+            <a href="https://www.linkedin.com/in/rudramanikanta/" aria-label="linkedin Profile" className="text-xl font-semibold orange-text-gradient montserrat">Linkedin Profile</a>
+          </button>
+          </div>
+          
           <p className="p-3 leading-[30px] text-xl w-full font-semibold montserrat">
             As a{" "}
             <span className="blue-text-gradient">full-stack developer</span>, I
@@ -62,9 +63,14 @@ function App() {
       </motion.div>
       <div className="p-10 mt-10 ml-12" id="project">
         <div>
+          <div className="flex justify-between ">
           <h3 className="text-4xl font-black duration-300 green-text-gradient lg:leading-2 animate group-hover:scale-110 hover:blue_gradient">
             Projects.
           </h3>
+          <button className="p-3 py-4 transition-all duration-75 rounded-2xl animate hover:rounded-md bg-neutral-500/5 hover:backdrop-blur-xl hover:bg-neutral-500/10 hover:scale-110"> 
+            <a href="https://github.com/rudramanikanta" aria-label="GitHub Profile" className="text-xl font-semibold green-text-gradient montserrat">GitHub Profile</a>
+          </button>
+          </div>
           <p className="leading-[40px] montserrat hover:organe_gradient font-semibold text-xl width-[200px]">
             I mainly focused on building my project on ReactJS and its libraries
             to leverage the power of this popular JavaScript framework and its rich libraries. ReactJS
@@ -73,19 +79,19 @@ function App() {
           </p>
         </div>
         <motion.div style={{marginTop}} ref={ref} className="grid gap-4 mt-10 gap-y-5 gap-x-4 lg:grid-cols-3 align-center">
-          <Tilt className="w-full  shadow-card border-2 z-[10] bg-tertiary duration-150 align-middle gap-x-4 ease-in p-[50px] h-[300px] px-8 bg-opacity-50 group  hover:rounded-md hover:scale-110   py-10  hover:bg-neutral-500/5 ring-1 ring-blue_gradient hover:ring-2 animate hover:ring-green_gradient rounded-[20px]">
+          <Tilt className="group w-full  shadow-card border-2 z-[10] bg-tertiary duration-150 align-middle gap-x-4 ease-in p-[50px] h-[300px] px-8 bg-opacity-50 group  hover:rounded-md hover:scale-110   py-10  hover:bg-neutral-700/5 backdrop-blur-xl ring-1 ring-blue_gradient hover:ring-2 animate hover:ring-green_gradient rounded-[20px]">
             <div className="flex text-center align-top gap-x-4 z-[40]">
               <a href="https://github.com/rudramanikanta">
                 <img
                   src={github}
-                  className="rounded-full z-[40] h-[50px] w-[50px]"
+                  className="rounded-full  z-[40] h-[50px] w-[50px]"
                alt="" ></img>
               </a>
-              <p className="text-4xl font-bold text-white montserrat blue-text-gradient z-[100]">
+              <p className="text-4xl font-bold montserrat blue-text-gradient z-[100]">
                 Farmer Seva
               </p>
             </div>
-            <p className="font-thin leading-7 text-white montserrat z-[4]">
+            <p className="font-thin group-hover:text-black montserrat leading-7 text-white montserrat z-[4]">
               Overall, the MERN full stack architecture is a powerful and
               flexible choice for building Framer websites. This architecture
               allows for the development of dynamic and interactive websites
@@ -97,7 +103,7 @@ function App() {
               <a href="https://github.com/rudramanikanta">
                 <img
                   src={github}
-                  className="rounded-full h-[50px] w-[50px]"
+                  className="rounded-full h-[50px] w-[50px] "
                 alt=""></img>
               </a>
               <p className="text-4xl font-bold blue-text-gradient montserrat ">

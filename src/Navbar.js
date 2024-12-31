@@ -23,7 +23,7 @@ const Navbar = () => {
       }, []);
   return (
     <nav
-    className={scrolled?`bg-black h-[120px]  w-full flex-between items-center py-4 p-10 fixed top-0 z-20 bg-opacity-80  text-white`:`h-[120px] p-10  w-full flex-between items-center py-3 fixed top-0 z-20 bg-opacity-80  `}
+    className={scrolled?`bg-black h-[120px]  w-full flex-between items-center py-4 p-10 fixed top-0 z-20 bg-opacity-80  backdrop-blur-md text-white`:`h-[120px] p-10  w-full flex-between backdrop-blur-md items-center py-3 fixed top-0 z-20 bg-opacity-80  `}
   >
     <motion.div initial="hidden" animate="visible"  exit="exit"  variants={slideInFromTop} className='flex justify-center gap-4 p-2 text-center align-middle'>
         <img src={profile} className='h-[50px] w-[50px] rounded-full '></img>

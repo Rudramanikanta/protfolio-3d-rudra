@@ -30,7 +30,7 @@ function App() {
       <motion.div   className="relative flex-1 gap-5 p-10 ml-6 gap-y-6">
         <div className="p-10">
         <div className="flex justify-between mt-[6rem]">
-        <h1 className="p-2 text-4xl font-bold orange-text-gradient lg:mt-12">
+        <h1 className="p-2 mt-12 text-4xl font-bold orange-text-gradient">
             Overview
           </h1>
           <button className="p-2 mt-12 transition-all duration-75 rounded-sm h-fit w-fit animate hover:rounded-md bg-neutral-500/5 hover:backdrop-blur-xl hover:bg-neutral-500/10 hover:scale-110"> 
@@ -98,7 +98,7 @@ function App() {
               with a rich user experience.
             </p>
           </Tilt>
-          <Tilt className=" duration-150 align-middle gap-x-4 ease-in border-2 ring-slate-500 shadow-xl p-[50px] h-[300px] px-8 bg-opacity-50 group  bg-tertiary hover:rounded-md hover:scale-110   py-10  hover:bg-neutral-500/5 ring-1 ring-blue_gradient hover:ring-2 animate hover:ring-green_gradient rounded-[20px]">
+          <Tilt className="group duration-150 align-middle gap-x-4 ease-in border-2 ring-slate-500 shadow-xl p-[50px] h-[300px] px-8 bg-opacity-50 group  bg-tertiary hover:rounded-md hover:scale-110   py-10  hover:bg-neutral-500/5 ring-1 ring-blue_gradient hover:ring-2 animate hover:ring-green_gradient rounded-[20px]">
             <div className="flex text-center align-top gap-x-4">
               <a href="https://github.com/rudramanikanta">
                 <img
@@ -107,17 +107,17 @@ function App() {
                 alt=""></img>
               </a>
               <p className="text-4xl font-bold blue-text-gradient montserrat ">
-                Movie site
+                Side plus clone
               </p>
             </div>
-            <p className="font-thin leading-7 text-white montserrat">
+            <p className="font-thin leading-7 text-white group-hover:text-black montserrat">
               A movie website developed using Next.js is a dynamic and
               user-friendly web application that showcases and provides
               information about movies. It utilizes the Next.js framework, a
               popular React-based framework, to deliver a good .
             </p>
           </Tilt>
-          <Tilt className=" duration-150 align-middle gap-x-4 ease-in p-[50px] h-[300px] px-8 bg-opacity-50 group  bg-tertiary border-2 ring-slate-500 ring-1 hover:rounded-md hover:scale-110   py-10  hover:bg-neutral-500/5 shadow-xl ring-blue_gradient hover:ring-2 animate hover:ring-green_gradient rounded-[20px]">
+          <Tilt className="group duration-150 align-middle gap-x-4 ease-in p-[50px] h-[300px] px-8 bg-opacity-50 group  bg-tertiary border-2 ring-slate-500 ring-1 hover:rounded-md hover:scale-110   py-10  hover:bg-neutral-500/5 shadow-xl ring-blue_gradient hover:ring-2 animate hover:ring-green_gradient rounded-[20px]">
             <div className="flex text-center align-top gap-x-4">
               <a href="https://github.com/rudramanikanta">
                 <img
@@ -126,10 +126,10 @@ function App() {
                alt="" ></img>
               </a>
               <p className="text-4xl font-bold blue-text-gradient montserrat ">
-                Book store
+                Side vodka clone
               </p>
             </div>
-            <p className="font-thin leading-7 text-white montserrat">
+            <p className="font-thin leading-7 text-white group-hover:text-black montserrat">
               bookstore website developed using servlets and JSP is a web
               application that enables users to browse online. It typically
               consists of a front-end, which is the user interface , and a
@@ -138,7 +138,7 @@ function App() {
           </Tilt>
         </motion.div>
       </div>
-      <footer className="max-container " id="contact">
+      <footer className="ml-12 max-container" id="contact">
         <div className="flex flex-wrap items-start justify-between gap-20 max-lg:flex-col">
           <div className="flex flex-col items-start p-10">
             <p className="float-left text-4xl font-black mt-7 align-left">
@@ -146,9 +146,9 @@ function App() {
             </p>
             <p className="mt-6 text-base leading-7 font-montserrat text-white-400 sm:max-w-sm"></p>
             <div className="flex items-center gap-5 mt-8">
-              <FaInstagram size={50}></FaInstagram>
-              <FaFacebook size={50} />
-              <FaTwitter size={50} />
+              <a href=""><FaInstagram size={50}></FaInstagram></a>
+              <a href=""><FaFacebook size={50} /></a>
+              <a href=""><FaTwitter size={50} /></a>
             </div>
           </div>
         </div>

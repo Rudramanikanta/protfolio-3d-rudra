@@ -16,7 +16,7 @@ const Word = () => {
               const words = val.split(" ");
              
   return (
-    <motion.div ref={ref}  className="relative flex-1 gap-5 p-10 pr-10 ml-6 gap-y-6">
+    <motion.div ref={ref}  className="relative flex-1 gap-5 p-10 pr-10 mb-20 ml-6 gap-y-6 lg:mb-0">
         <div className="p-10">
           <h1 className="p-2 text-4xl font-bold blue-text-gradient">
             About me

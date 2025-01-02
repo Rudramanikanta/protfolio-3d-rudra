@@ -146,9 +146,9 @@ function App() {
             </p>
             <p className="mt-6 text-base leading-7 font-montserrat text-white-400 sm:max-w-sm"></p>
             <div className="flex items-center gap-5 mt-8">
-              <a href=""><FaInstagram size={50}></FaInstagram></a>
-              <a href=""><FaFacebook size={50} /></a>
-              <a href=""><FaTwitter size={50} /></a>
+              <a href="https://www.instagram.com/rudra_abburi/"><FaInstagram size={50}></FaInstagram></a>
+              <a href="https://www.facebook.com/abburirudra"><FaFacebook size={50} /></a>
+              <a href="https://x.com/RudraAbburi"><FaTwitter size={50} /></a>
             </div>
           </div>
         </div>

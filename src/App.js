@@ -80,16 +80,16 @@ function App() {
         </div>
         <motion.div style={{marginTop}} ref={ref} className="grid gap-4 mt-10 gap-y-5 gap-x-4 lg:grid-cols-3 align-center">
           <Tilt className="group w-full  shadow-card border-2 z-[10] bg-tertiary duration-150 align-middle gap-x-4 ease-in p-[50px] h-[300px] px-8 bg-opacity-50 group  hover:rounded-md hover:scale-110   py-10  hover:bg-neutral-700/5 backdrop-blur-xl ring-1 ring-blue_gradient hover:ring-2 animate hover:ring-green_gradient rounded-[20px]">
-            <div className="flex text-center align-top gap-x-4 z-[40]">
-              <a href="https://github.com/rudramanikanta">
+            <div className="flex text-center align-top gap-x-4 z-[40] group/a">
+              <a href="https://github.com/rudramanikanta" className="flex text-center gap-x-5">
                 <img
                   src={github}
                   className="rounded-full  z-[40] h-[50px] w-[50px]"
                alt="" ></img>
-              </a>
-              <p className="text-4xl font-bold montserrat blue-text-gradient z-[100]">
+              <p className="text-4xl font-bold montserrat blue-text-gradient z-[100] group-hover/a:green-text-gradient">
                 Farmer Seva
               </p>
+              </a>
             </div>
             <p className="font-thin group-hover:text-black montserrat leading-7 text-white montserrat z-[4]">
               Overall, the MERN full stack architecture is a powerful and
@@ -98,38 +98,40 @@ function App() {
               with a rich user experience.
             </p>
           </Tilt>
-          <Tilt className="group duration-150 align-middle gap-x-4 ease-in border-2 ring-slate-500 shadow-xl p-[50px] h-[300px] px-8 bg-opacity-50 group  bg-tertiary hover:rounded-md hover:scale-110   py-10  hover:bg-neutral-500/5 ring-1 ring-blue_gradient hover:ring-2 animate hover:ring-green_gradient rounded-[20px]">
-            <div className="flex text-center align-top gap-x-4">
-              <a href="https://github.com/rudramanikanta">
+          <Tilt className="group/main duration-150 align-middle gap-x-4 ease-in border-2 ring-slate-500 shadow-xl p-[50px] h-[300px] px-8 bg-opacity-50 group  bg-tertiary hover:rounded-md hover:scale-110   py-10  hover:bg-neutral-500/5 ring-1 ring-blue_gradient hover:ring-2 animate hover:ring-green_gradient rounded-[20px]">
+            <div className="flex text-center align-top gap-x-4 group/a">
+              <a href="https://github.com/rudramanikanta" className="flex text-center gap-x-5">
                 <img
                   src={github}
                   className="rounded-full h-[50px] w-[50px] "
                 alt=""></img>
-              </a>
-              <p className="text-4xl font-bold blue-text-gradient montserrat ">
+              
+              <p className="text-4xl font-bold blue-text-gradient montserrat group-hover/a:text-green">
                 Side plus clone
               </p>
+              </a>
             </div>
-            <p className="font-thin leading-7 text-white group-hover:text-black montserrat">
+            <p className="font-thin leading-7 text-white group-hover/main:text-black montserrat">
               A movie website developed using Next.js is a dynamic and
               user-friendly web application that showcases and provides
               information about movies. It utilizes the Next.js framework, a
               popular React-based framework, to deliver a good .
             </p>
           </Tilt>
-          <Tilt className="group duration-150 align-middle gap-x-4 ease-in p-[50px] h-[300px] px-8 bg-opacity-50 group  bg-tertiary border-2 ring-slate-500 ring-1 hover:rounded-md hover:scale-110   py-10  hover:bg-neutral-500/5 shadow-xl ring-blue_gradient hover:ring-2 animate hover:ring-green_gradient rounded-[20px]">
-            <div className="flex text-center align-top gap-x-4">
-              <a href="https://github.com/rudramanikanta">
+          <Tilt className="group/main duration-150 align-middle gap-x-4 ease-in p-[50px] h-[300px] px-8 bg-opacity-50 group  bg-tertiary border-2 ring-slate-500 ring-1 hover:rounded-md hover:scale-110   py-10  hover:bg-neutral-500/5 shadow-xl ring-blue_gradient hover:ring-2 animate hover:ring-green_gradient rounded-[20px]">
+            <div className="flex text-center align-top gap-x-4 group">
+              <a href="https://github.com/rudramanikanta" className="flex text-center gap-x-5">
                 <img
                   src={github}
                   className="rounded-full h-[50px] w-[50px]"
                alt="" ></img>
-              </a>
-              <p className="text-4xl font-bold blue-text-gradient montserrat ">
+              
+              <p className="text-4xl font-bold blue-text-gradient montserrat group-hover/a:text-green-500">
                 Side vodka clone
               </p>
+              </a>
             </div>
-            <p className="font-thin leading-7 text-white group-hover:text-black montserrat">
+            <p className="font-thin leading-7 text-white group-hover/main:text-black montserrat">
               bookstore website developed using servlets and JSP is a web
               application that enables users to browse online. It typically
               consists of a front-end, which is the user interface , and a

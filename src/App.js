@@ -27,7 +27,7 @@ function App() {
       <Home></Home>
       
       <Word></Word>
-      <motion.div   className="relative flex-1 gap-5 p-10 ml-6 gap-y-6">
+      <motion.div   className="relative flex-1 gap-5 p-10 ml-6 gap-y-6 mt-[400px] lg:mt-0">
         <div className="p-10">
         <div className="flex justify-between mt-[6rem]">
         <h1 className="p-2 mt-12 text-4xl font-bold orange-text-gradient">

@@ -1,5 +1,5 @@
 import "./App.css";
-import { Suspense, useEffect } from "react";
+import { Suspense } from "react";
 import Loader from "./Loader";
 import { motion, useTransform } from "framer-motion";
 import { useScroll } from "framer-motion";
@@ -23,7 +23,7 @@ function App() {
   });
   const marginTop=useTransform(scrollYProgress,[0,1],["100px","-130px"])
   return (
-    <div className="relative z-0 text-black bg-white">
+    <div className="text-black bg-white">
       <Home></Home>
       
       <Word></Word>
@@ -38,7 +38,7 @@ function App() {
           </button>
           </div>
           
-          <p className="p-3 leading-[30px] text-xl w-full font-semibold montserrat">
+          <p className="p-3 leading-[40px] text-xl w-full font-semibold montserrat tracking-wide">
             As a{" "}
             <span className="blue-text-gradient">full-stack developer</span>, I
             have the exciting role of crafting entire web experiences from the
